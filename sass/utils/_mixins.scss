@@ -1,0 +1,30 @@
+/* box shadow */
+@mixin shadow1 {
+    box-shadow: 0px 5px 10px #ddd;
+}
+
+@mixin shadow2 {
+    box-shadow: 0px 5px 10px #bbb;
+}
+
+@mixin shadow3 {
+    box-shadow: 0px 5px 10px #ccc;
+}
+
+@mixin shadow4 {
+    box-shadow: 0px 0px 10px 1px #d5d3d3;
+}
+
+@mixin shadow-hover {
+    box-shadow: 0px 5px 5px #aaa;
+}
+
+@mixin shadow-hover-btn {
+    box-shadow: 0px 5px 20px #333;
+}
+
+
+/* gradient */
+@mixin btn-gradient {
+    background: linear-gradient(170deg, #FF79DA, #9356DC);
+}

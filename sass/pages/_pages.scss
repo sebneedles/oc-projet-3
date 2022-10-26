@@ -1,0 +1,237 @@
+/* -------------------------------------------------------------
+HEADER PAGES
+------------------------------------------------------------- */
+.header-pages {
+    height: 63px;
+    display: flex;
+    flex-direction: initial;
+    position: relative;
+    &__img {
+        height: 30px;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    &--nav {
+        position: absolute;
+        left: 20px;
+        .fa-arrow-left {
+            font-size: 20px;
+            color: $black-clr;
+        }
+    }
+}
+
+/* -------------------------------------------------------------
+HEADING SECTION
+------------------------------------------------------------- */
+.heading-img img {
+    width: 100%;
+    height: 250px;
+}
+
+.bandeau {
+    object-fit: cover;
+}
+
+/* -------------------------------------------------------------
+MENU SECTION
+------------------------------------------------------------- */
+.restau-card {
+    width: 100%;
+    margin: auto;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    margin-top: -50px;
+    background-color: $white-grey-clr;
+    &__content {
+        width: 100%;
+    }
+}
+
+.content-title {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 30px;
+    h1 {
+        font-family: 'Shrikhand';
+        color: $black-clr;
+        font-size: 28px;
+        padding: 0;
+        width: unset;
+        text-align: unset;
+        margin: unset;
+        font-weight: 100;
+    }
+    &__like .fa-heart {
+        font-size: 20px;
+        -webkit-text-stroke: $black-clr;
+        color: $white-grey-clr;
+        -webkit-text-stroke-width: 1px;
+        cursor: pointer;
+        &:hover {
+            animation: heart .5s ease forwards;
+        }
+    }
+}
+
+.menu-group {
+    width: 100%;
+    max-width: 1280px;
+    margin: 2rem auto;
+    &__large {
+        padding: 0px 20px;
+        margin-bottom: 2rem;
+        .title-menu {
+            font-size: 16px;
+            font-weight: 300;
+            color: $black-clr;
+            text-transform: uppercase;
+            margin-left: unset;
+            &::after {
+                content: ".";
+                font-size: 0px;
+                width: 10%;
+                border-bottom: 3px solid $tertiary-clr;
+                display: block;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+
+/* -------------------------------------------------------------
+MENU ITEM
+------------------------------------------------------------- */
+
+.menus__category {
+    background-color: $white-clr;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    .menu-item {
+        display: flex;
+        overflow: hidden;
+        border-radius: 1rem;
+        @include shadow4;
+        cursor: pointer;
+        .menu-item__price {
+            margin-left: auto;
+            font-weight: 700;
+            padding: 1rem;
+            display: flex;
+            align-items: flex-end;
+        }
+        .menu-item__description {
+            padding: 0.8rem;
+            height: 45px;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            overflow: hidden;
+            .title-description {
+                font-size: 18px;
+                font-weight: 400;
+            }
+            .text-description {
+                font-size: 16px;
+                font-weight: 200;
+            }
+        }
+        .menu-item__check {
+            background-color: $tertiary-clr;
+            margin-right: -4rem;
+            width: 4rem;
+            border-radius: 0 1rem 1rem 0;
+            transition: margin-right .4s;
+            display: grid;
+            place-items: center;
+            i {
+                display: grid;
+                place-items: center;
+                background: $white-clr;
+                // aspect-ratio: 1;
+                width: 1.4rem;
+                height: 1.4rem;
+                border-radius: 1rem;
+                color: $tertiary-clr;
+                font-size: 16px;
+            }
+        }
+        &:hover {
+            .menu-item__check {
+                margin-right: 0;
+            }
+            i {
+                animation: checkspin .4s linear;
+            }
+        }
+    }
+}
+
+@keyframes checkspin {
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.m1 {
+    animation: fade .9s;
+}
+.m2 {
+    animation: fade 1.8s;
+}
+.m3 {
+    animation: fade 2.7s;
+}
+.m4 {
+    animation: fade 3.4s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------------------------------------------------
+INFO TEXT
+------------------------------------------------------------- */
+.menu-text {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+        color: $black-clr;
+    }
+    &--text {
+        font-size: 15px;
+        font-weight: 200;
+        color: $black-clr;
+    }
+}
+
+/* -------------------------------------------------------------
+MENU PRICE
+------------------------------------------------------------- */
+.menu-price {
+    display: flex;
+    align-items: flex-end;
+    &__price {
+        text-decoration: none;
+    }
+    &--check {
+        background-color: $tertiary-clr; 
+    }
+}

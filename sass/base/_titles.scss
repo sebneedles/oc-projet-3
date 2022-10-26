@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5 {
+    margin-block-end: unset;
+    margin-block-start: unset;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: $black-clr;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    padding-top: 43px;
+}
+
+h2 {
+    margin: 0 0 0 20px;
+    font-size: 22px;
+    font-weight: 500;
+    color: $black-clr;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: $black-clr;
+    margin: 0;
+}
